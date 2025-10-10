@@ -1,5 +1,5 @@
 # wesite url
  
 ```bash 
-https://rajeshwar00shinde.github.io/me/
+https://rajeshwar-shinde.github.io/me/
 ```
