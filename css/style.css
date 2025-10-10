@@ -1054,16 +1054,21 @@ body {
     color: var(--light-text);
     border: none;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 20%;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     position: absolute;
-    top: 50%;
+    top: 7%;
     transform: translateY(-50%);
     z-index: 10;
     box-shadow: var(--shadow-medium);
     transition: background-color 0.3s ease, transform 0.3s ease;
     outline: none; /* Remove focus outline */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(35px, 4.5vw, 55px);
+    height: clamp(35px, 4.5vw, 55px);
 }
 
 .carousel-nav:hover {
@@ -1072,11 +1077,11 @@ body {
 }
 
 .carousel-nav.prev {
-    left: 0;
+    left: clamp(10px, 2.5vw, 25px);
 }
 
 .carousel-nav.next {
-    right: 0;
+    right: clamp(10px, 2.5vw, 25px);
 }
 
 .carousel-track-container {
@@ -1175,38 +1180,5 @@ body {
     }
     .certification-item img {
         max-height: 350px;
-    }
-}
-
-@media (max-width: 576px) {
-    .certification-carousel {
-        padding: 0; /* Remove padding on very small screens, arrows will be outside */
-        flex-direction: column; /* Stack arrows above/below the carousel content */
-        gap: 20px;
-    }
-    .carousel-nav {
-        position: static; /* Make arrows flow with document, not absolute */
-        transform: none; /* Remove translateY */
-        width: 80%; /* Make buttons wider */
-        max-width: 200px; /* Limit button width */
-        margin: 0 auto; /* Center buttons */
-        padding: 10px;
-        font-size: 1.1rem;
-        border-radius: 8px;
-    }
-    .carousel-nav.prev { order: 1; } /* Order to place previous button first */
-    .carousel-track-container { order: 2; }
-    .carousel-nav.next { order: 3; } /* Order to place next button last */
-    .certification-item {
-        padding: 15px;
-    }
-    .certification-details h3 {
-        font-size: 1.4rem;
-    }
-    .certification-details p {
-        font-size: 0.9rem;
-    }
-    .certification-item img {
-        max-height: 250px;
     }
 }
